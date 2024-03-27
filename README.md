@@ -2,6 +2,13 @@
 
 This project call `VisionUltra`, this is for blink people to hear the document from different languages.
 
+### Services have been used
+
+- rekognition
+- translate
+- textract
+- polly
+
 ## Installation
 
 To set up the environment, follow these steps:
