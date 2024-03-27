@@ -12,8 +12,7 @@ class StorageService:
     def upload_file(self, file_bytes, file_name):
         self.client.put_object(Bucket = self.bucket_name,
                                Body = file_bytes,
-                               Key = file_name,
-                               ACL = 'public-read')
+                               Key = file_name)
 
         return {'fileId': file_name,
                 'fileUrl': "http://" + self.bucket_name + ".s3.amazonaws.com/" + file_name}

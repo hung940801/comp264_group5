@@ -115,18 +115,19 @@ function generateSound(translations) {
     })
 }
 
+
 // add a new function for displaying the generated sound
-function displaySound(sound) {
-    let audio_file = sound["audio_file_path"]
-    var sound      = document.createElement('audio');
-    sound.id       = 'audio-player';
-    sound.controls = 'controls';
-    sound.src      = "./" + audio_file;
-    sound.type     = 'audio/mpeg';
+function displaySound(response) {
+    let audio_file = response["audio_file_path"];
+    var audioElement = document.createElement('audio');
+    audioElement.id = 'audio-player';
+    audioElement.controls = 'controls';
+    audioElement.src = serverUrl + '/audio/' + audio_file; // This should match the Chalice route
+    audioElement.type = 'audio/mpeg';
     document.getElementById('audio_track').innerHTML = "";
-    document.getElementById('audio_track').appendChild(sound);
-    sound = ""
+    document.getElementById('audio_track').appendChild(audioElement);
 }
+
 
 function uploadAndTranslate() {
     uploadFile()
