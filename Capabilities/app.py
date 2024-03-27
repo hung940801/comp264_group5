@@ -37,6 +37,20 @@ region_name = 'us-east-1'
 #####
 # RESTful endpoints
 #####
+@app.route('/')  # This will serve as your home page
+def index_page():
+    # Define the path to Website directory where index.html is located
+    project_root = os.path.dirname(__file__)
+    website_path = os.path.join(project_root, '..', 'Website', 'index.html')
+    
+    # Read the contents of the index.html file
+    with open(website_path, 'r', encoding='utf-8') as html_file:
+        html_content = html_file.read()
+    
+    # Return the contents of the HTML file as the response
+    return Response(body=html_content, status_code=200, headers={'Content-Type': 'text/html; charset=utf-8'})
+
+# add a new API endpoint
 @app.route('/files', methods = ['POST'], cors = True)
 def upload_image():
     """processes file upload and saves file to storage service"""
