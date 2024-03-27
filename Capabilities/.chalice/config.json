@@ -1,0 +1,12 @@
+{
+  "version": "2.0",
+  "app_name": "Capabilities",
+  "stages": {
+    "dev": {
+      "autogen_policy": false,
+      "iam_policy_file": "./policy-dev.json",
+      "region": "us-east-1",
+      "api_gateway_stage": "api"
+    }
+  }
+}

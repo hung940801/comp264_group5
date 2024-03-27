@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"/>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>VisionUltra</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+    <style>
+        .upload_section {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 0;
+        }
+        .upload_section p {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .upload_section input {
+            width: 50%;
+            height: 200px;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .audio_section {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 0;
+        }
+        .audio_section p {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .audio_section #audio_track audio {
+            width: 100%;
+        }
+        .translation_section {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 0;
+        }
+        .translation_section p {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="w3-theme-14">
+    <div style="min-width:400px">
+        <div class="w3-bar w3-large w3-theme-d4">
+            <span class="w3-bar-item">VisionUltra</span>
+        </div>
+
+        <div class="w3-container w3-content">
+            <div class="upload_section">
+                <p class="w3-opacity"><b>Upload</b></p>
+                <input id="file" type="file" name="file" accept="*"/>
+                <input class="w3-button w3-blue-grey" type="submit" value="Upload"
+                       onclick="uploadAndTranslate()"/>
+            </div>
+
+            <div class="audio_section">
+                <p class="w3-opacity"><b>Audio</b></p>
+                <div id="audio_track"></div>
+            </div>
+
+            <div class="translation_section">
+                <p class="w3-opacity"><b>File</b></p>
+                <div id="view" class=""
+                     style="display:none;">
+                    <div class="translation_content">
+                        <h5>Original Text:</h5>
+                        <div id="original"></div>
+                        <hr>
+                        <h5>Translated Text:</h5>
+                        <div id="translations"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

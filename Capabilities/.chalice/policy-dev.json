@@ -1,0 +1,18 @@
+{
+    "Version": "2024-02-15",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "s3:*",
+                "rekognition:*",
+                "translate:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+
+}
