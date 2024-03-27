@@ -32,4 +32,4 @@ cd Capabilities
 chalice local
 ```
 
-5. Open the application URL: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+5. Open the application URL [http://127.0.0.1:8000](http://127.0.0.1:8000), then upload the document that wants to be translated and click the `Upload` button. The translated audio will be played automatically after the translation.

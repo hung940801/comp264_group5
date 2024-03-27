@@ -8,7 +8,6 @@ import json
 import boto3
 
 from docx import Document
-from pdf2image import convert_from_path, convert_from_bytes
 import io
 import time
 import fitz  # PyMuPDF
