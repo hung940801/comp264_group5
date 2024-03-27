@@ -1,6 +1,6 @@
 # COMP264 (Sec.002) - Group 5
 
-This project call `VisionUltra`, this is for blink people to hear the document from different languages.
+This project call `VisionUltra`, this is for blind people to hear the document from different languages.
 
 ### Services have been used
 
