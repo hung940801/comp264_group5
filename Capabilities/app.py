@@ -38,7 +38,6 @@ storage_service = storage_service.StorageService(storage_location)
 recognition_service = recognition_service.RecognitionService(storage_service)
 translation_service = translation_service.TranslationService()
 
-textract_client = boto3.client('textract')
 region_name = 'us-east-1'
 
 #####

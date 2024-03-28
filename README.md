@@ -6,7 +6,6 @@ This project call `VisionUltra`, this is for blind people to hear the document f
 
 - rekognition
 - translate
-- textract
 - polly
 
 ## Installation
